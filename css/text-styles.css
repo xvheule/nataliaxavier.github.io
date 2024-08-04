@@ -1,0 +1,57 @@
+body {
+    font-family: Source Sans Pro, Sans Pro, serif;
+    color: white;
+    margin: 0;
+    overflow: hidden;
+}
+
+h1 {
+    font-family: Playfair Display, serif;
+    font-size: 48px;
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: auto;
+    overflow-style: marquee-line;
+}
+
+h2 {
+    font-family: Playfair Display, serif;
+    font-size: 40px;
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: auto;
+    overflow-style: marquee-line;
+}
+
+h3 {
+    font-family: Playfair Display, serif;
+    font-size: 36px;
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: auto;
+    overflow-style: marquee-line;
+}
+
+p {
+    font-family: Source Sans Pro, Sans Pro, serif;
+    font-size: 28px;
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: auto;
+    overflow-style: marquee-line;
+}
+
+ul {
+    font-family: Source Sans Pro, Sans Pro, serif;
+    font-size: 28px;
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: auto;
+    overflow-style: marquee-line;
+}
+
