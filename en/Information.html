@@ -24,21 +24,28 @@
 
         /* Style tab links */
         .tablink {
-            background-color: #555;
+            background-color: transparent;
             color: white;
             float: left;
             border: none;
             outline: none;
             cursor: pointer;
-            padding: 14px 16px;
+            padding: 6px 6px;
             font-size: 17px;
-            width: 20%;
             top: 48px;
-            height: 48px;
+            text-align: center;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            margin-top: 1px;
+            margin-bottom: 1px;
         }
 
         .tablink:hover {
             background-color: #777;
+        }
+
+        .tablink img {
+            height: 36px;
         }
 
         /* Style the tab content (and add height:100% for full page content) */
@@ -46,6 +53,7 @@
             color: #777;
             display: none;
             padding: 100px 20px;
+            width: 100%;
             height: 100%;
         }
 
@@ -68,6 +76,28 @@
         #Tab5 {
             background-color: #5a4b3d;
         }
+
+        #Tab6 {
+            background-color: #5a4b3d;
+        }
+
+        #Tab7 {
+            background-color: #5a4b3d;
+        }
+
+        .map-button-container {
+            position:absolute;
+            top:0;
+            left:0;
+            width:48px;
+        }
+
+        .legend-container {
+            scale: 0.85;
+            width: 100%;
+            margin-top:-160px;
+            margin-left:-60px;
+        }
     </style>
 </head>
 
@@ -84,94 +114,108 @@
     </div>
 </div>
 
-<button class="tablink" onclick="openPage('Tab1', this, '#5a4b3d')" id="defaultOpen"><p3>Getting There</button>
-<button class="tablink" onclick="openPage('Tab2', this, '#5a4b3d')"><p3>Tourist Info</p3></button>
-<button class="tablink" onclick="openPage('Tab3', this, '#5a4b3d')"><p3>Accommodation</p3></button>
-<button class="tablink" onclick="openPage('Tab4', this, '#5a4b3d')"><p3>Food & Drink</p3></button>
-<button class="tablink" onclick="openPage('Tab5', this, '#5a4b3d')"><p3>Sightseeing</p3></button>
+<div class="content-double">
+    <div>
+        <div id="Tab1" class="tabcontent" style="width:100%;">
+            <div class="legend-container" style="width:100%;">
+                <h3>Wedding Venues</h3>
 
-<div id="Tab1" class="tabcontent">
-    <div class="content-double" style="top:96px;">
-        <div style="scale: 0.85;  margin-top:-80px;">
-            <h1>From Madrid</h1>
-            <ul>
-                <li>Train from Madrid to Jaen</li>
-                <li>Bus From Jaen to Ubeda</li>
-            </ul>
-            <h1>From Malaga</h1>
-            <ul>
-                <li>Bus from Malaga to Ubeda</li>
-            </ul>
+            </div>
         </div>
-        <div style="display:inline-block; overflow:hidden;">
-            <iframe style="position:relative; top:-66px; bottom:0; border:none;"
-                    src="https://www.google.com/maps/d/embed?mid=11nQVqcZiGG4MLkzHopyILf25ngjb69E&ehbc=2E312F"
-                    width=100% height=110% wloc=near></iframe>
+        <div id="Tab2" class="tabcontent" style="width:100%;">
+            <div class="legend-container" style="width:100%;">
+                <h3>Tourist Office</h3>
+                <p>Plaza de Analducia 5</p>
+                <p>2340 Ubeda (Jaen)</p>
+                <p>Mon-Fri: 9:00 - 19:30</p>
+                <p>Sat-Sun: 9:30 - 15:00</p>
+            </div>
+        </div>
+        <div id="Tab3" class="tabcontent" style="width:100%;">
+            <div class="legend-container" style="width:100%;">
+                <h3>Accommodation</h3>
+                <h4>Hotels</h4>
+                <ul>
+                    <li>Hotel Palacio de Ubeda GL *****</li>
+                    <li>Hotel Don Jan Boutique ****</li>
+                    <li>Parador Nacional Condestable Davalos ****</li>
+                    <li>Hotel Alvar Fanez ****</li>
+                    <li>Hotel Rosaleda de Don Pedro ***</li>
+                    <li>Hotel Maria de Molina ***</li>
+                    <li>Hotel Juancaballo **</li>
+                </ul>
+                <h4>Hostels</h4>
+                <ul>
+                    <li>Casa de Luna y Sol</li>
+                    <li>Hostal Santa Maria de Ubeda</li>
+                </ul>
+                <h4>Apartments</h4>
+                <ul>
+                    <li>De Don Juan</li>
+                    <li>El Losal</li>
+                    <li>Palacios del Agua</li>
+                    <li>Palacio de Vela de Los Cobos</li>
+                    <li>Sol del Prior</li>
+                    <li>Vitores</li>
+                </ul>
+            </div>
+        </div>
+        <div id="Tab4" class="tabcontent" style="width:100%;">
+            <div class="legend-container" style="width:100%;">
+                <h3>Restaurants</h3>
+
+            </div>
+        </div>
+        <div id="Tab5" class="tabcontent" style="width:100%;">
+            <div class="legend-container" style="width:100%;">
+                <h3>Pubs</h3>
+
+            </div>
+        </div>
+        <div id="Tab6" class="tabcontent" style="width:100%;">
+            <div class="legend-container" style="width:100%;">
+                <h3>Seeing the Sights</h3>
+
+            </div>
+        </div>
+        <div id="Tab7" class="tabcontent" style="width:100%;">
+            <div class="legend-container" style="width:100%;">
+                <h3>Experiences</h3>
+
+            </div>
         </div>
     </div>
-</div>
 
-<div id="Tab2" class="tabcontent">
-    <div class="content-double" style="top:96px;">
-        <div style="scale: 0.85;  margin-top:-80px;">
-            <h1>Tourist Office</h1>
-            <p>Plaza de Analducia 5</p>
-            <p>2340 Ubeda (Jaen)</p>
-            <p>Mon-Fri: 9:00 - 19:30</p>
-            <p>Sat-Sun: 9:30 - 15:00</p>
-        </div>
-        <div style="display:inline-block; overflow:hidden;">
+    <div style="position:relative;">
+        <div style="display:inline-block; overflow:hidden;width:100%;">
             <iframe style="position:relative; top:-66px; bottom:0; border:none;"
                     src="https://www.google.com/maps/d/embed?mid=11nQVqcZiGG4MLkzHopyILf25ngjb69E&ehbc=2E312F"
-                    width=100% height=110% wloc=near></iframe>
+                    width=100% height=110%></iframe>
+        </div>
+        <div class="map-button-container" style="width:48px;">
+            <button class="tablink" onclick="openPage('Tab1', this, '#5a4b3d')" id="defaultOpen">
+                <img src="../media/img/logos/venues.png">
+            </button>
+            <button class="tablink" onclick="openPage('Tab2', this, '#5a4b3d')">
+                <img src="../media/img/logos/information.png">
+            </button>
+            <button class="tablink" onclick="openPage('Tab3', this, '#5a4b3d')">
+                <img src="../media/img/logos/accommodation.png">
+            </button>
+            <button class="tablink" onclick="openPage('Tab4', this, '#5a4b3d')">
+                <img src="../media/img/logos/restaurants.png">
+            </button>
+            <button class="tablink" onclick="openPage('Tab5', this, '#5a4b3d')">
+                <img src="../media/img/logos/drinks.png">
+            </button>
+            <button class="tablink" onclick="openPage('Tab6', this, '#5a4b3d')">
+                <img src="../media/img/logos/sightseeing.png">
+            </button>
+            <button class="tablink" onclick="openPage('Tab7', this, '#5a4b3d')">
+                <img src="../media/img/logos/experiences.png">
+            </button>
         </div>
     </div>
-</div>
-
-<div id="Tab3" class="tabcontent">
-    <div class="content-double" style="top:96px;">
-        <div style="scale: 0.85;  margin-top:-80px;">
-            <h3>Hotels</h3>
-            <ul>
-                <li>Hotel Palacio de Ubeda GL *****</li>
-                <li>Hotel Don Jan Boutique ****</li>
-                <li>Parador Nacional Condestable Davalos ****</li>
-                <li>Hotel Alvar Fanez ****</li>
-                <li>Hotel Rosaleda de Don Pedro ***</li>
-                <li>Hotel Maria de Molina ***</li>
-                <li>Hotel Juancaballo **</li>
-            </ul>
-            <h3>Hostels</h3>
-            <ul>
-                <li>Casa de Luna y Sol</li>
-                <li>Hostal Santa Maria de Ubeda</li>
-            </ul>
-            <h3>Apartments</h3>
-            <ul>
-                <li>De Don Juan</li>
-                <li>El Losal</li>
-                <li>Palacios del Agua</li>
-                <li>Palacio de Vela de Los Cobos</li>
-                <li>Sol del Prior</li>
-                <li>Vitores</li>
-            </ul>
-        </div>
-        <div style="display:inline-block; overflow:hidden;">
-            <iframe style="position:relative; top:-66px; bottom:0; border:none;"
-                    src="https://www.google.com/maps/d/embed?mid=11nQVqcZiGG4MLkzHopyILf25ngjb69E&ehbc=2E312F"
-                    width=100% height=110% wloc=near></iframe>
-        </div>
-    </div>
-</div>
-
-<div id="Tab4" class="tabcontent">
-    <h3>Food & Drink</h3>
-    <p>Who we are and what we do.</p>
-</div>
-
-<div id="Tab5" class="tabcontent">
-    <h3>Sightseeing</h3>
-    <p>Who we are and what we do.</p>
 </div>
 
 <script>

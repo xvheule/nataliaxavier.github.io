@@ -35,6 +35,16 @@ h3 {
     overflow-style: marquee-line;
 }
 
+h4 {
+    font-family: Playfair Display, serif;
+    font-size: 28px;
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: auto;
+    overflow-style: marquee-line;
+}
+
 p {
     font-family: Source Sans Pro, Sans Pro, serif;
     font-size: 28px;
@@ -51,6 +61,7 @@ ul {
     color: white;
     margin-left: 5%;
     margin-right: 5%;
+    margin-top: -10px;
     overflow: auto;
     overflow-style: marquee-line;
 }
