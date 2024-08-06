@@ -11,6 +11,22 @@
     <link rel="stylesheet" href="../css/text-styles.css">
     <link rel="stylesheet" href="../css/inline-fonts.css">
     <link rel="stylesheet" href="../css/page-layout.css">
+    <link rel="stylesheet" href="../css/widgets.css">
+
+    <style>
+        .shadow-kiss {
+            /* The image used */
+            background-image: url("../media/img/shadow_kiss.JPG");
+
+            /* Full height */
+            height: 100%;
+
+            /* Center and scale the image nicely */
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
 
 </head>
 
@@ -28,16 +44,266 @@
     </div>
 </div>
 
-<form
-        id="wedding-registration"
-        method="POST"
-        action="https://script.google.com/macros/s/AKfycbzbx8MMKSQYbF50Vnd7hY-2bN46mW0ehiiCDs1_TiMhhyw0jRsdG9WDVbw-cpEK87BC/exec"
->
-    <input name="FieldA" type="text" placeholder="field A" required>
-    <input name="FieldB" type="text" placeholder="field B" required>
-    <button type="submit">Send</button>
-</form>
 
+<div class="content-double">
+    <div style="background-color:#5a4b3d;">
+        <h3>Confirm Attendance</h3>
+
+        <form
+                id="wedding-registration"
+                method="POST"
+                action="https://script.google.com/macros/s/AKfycbwV0m7N4bzCMthT-2UDjoAW0KksRYEw_TfWEwMZ2zLjfSPNE8PQdSboRF7-06QCEd_-/exec"
+        >
+
+            <!--Form heading-->
+            <div style="width:80%;">
+                <p>Names</p>
+            </div>
+            <div style="width:20%;">
+                <p>Attendance</p>
+            </div>
+
+            <!--First guest name & attendance-->
+            <div style="width:40%; height:32px">
+                <input id="Guest1FirstName" name="Guest1FirstName" type="text" placeholder="First" required>
+            </div>
+            <div style="width:40%; height:32px">
+                <input id="Guest1SurName" name="Guest1SurName" type="text" placeholder="Last" required>
+            </div>
+            <div style="width:20%; height:32px">
+                <select id="Attending" name="Attending">
+                    <option value="yes">Attending</option>
+                    <option value="no">Excused</option>
+                </select>
+            </div>
+
+            <!--Second guest name -->
+            <div style="width:40%; height:32px">
+                <input id="Guest2FirstName" name="Guest2FirstName" type="text" placeholder="First" required>
+            </div>
+            <div style="width:40%; height:32px">
+                <input id="Guest2SurName" name="Guest2SurName" type="text" placeholder="Last" required>
+            </div>
+            <div style="width:20%; height:32px">
+                <div style="width:10%; height:32px">
+                    <input type="checkbox" id="HasPlusOne" name="HasPlusOne" value="no">
+                </div>
+                <div style="width:90%; height:32px">
+                    <label for="HasPlusOne">No partner</label>
+                </div>
+            </div>
+
+            <!--Children -->
+            <div style="width:100%;">
+                <p>Children</p>
+            </div>
+            <div style="width:20%; height:32px">
+                <select id="Children" name="Children" onchange="onChildrenUpdated()">
+                    <option value=0>No</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                    <option value=5>5</option>
+                </select>
+            </div>
+            <div style="width:80%; height:32px"></div>
+
+
+            <!--First Child -->
+            <div id="C_Child1Name" style="width:60%; height:32px">
+                <input id="Child1Name" name="Child1Name" type="text" placeholder="Name" required>
+            </div>
+            <div id="C_Child1Age" style="width:20%; height:32px">
+                <input id="Child1Age" name="Child1Age" type="text" placeholder="Age" required>
+            </div>
+            <div id="C_Child1Menu" style="width:20%; height:32px">
+                <select id="Child1Menu" name="Child1Menu">
+                    <option value="No Food">None</option>
+                    <option value="Child Menu">Child Menu</option>
+                    <option value="Full Menu">Full Menu</option>
+                </select>
+            </div>
+
+            <!--Second Child -->
+            <div id="C_Child2Name" style="width:60%; height:32px">
+                <input id="Child2Name" name="Child2Name" type="text" placeholder="Name" required>
+            </div>
+            <div id="C_Child2Age" style="width:20%; height:32px">
+                <input id="Child2Age" name="Child2Age" type="text" placeholder="Age" required>
+            </div>
+            <div id="C_Child2Menu" style="width:20%; height:32px">
+                <select id="Child2Menu" name="Child2Menu">
+                    <option value="No Food">None</option>
+                    <option value="Child Menu">Child Menu</option>
+                    <option value="Full Menu">Full Menu</option>
+                </select>
+            </div>
+
+            <!--Third Child -->
+            <div id="C_Child3Name" style="width:60%; height:32px">
+                <input id="Child3Name" name="Child3Name" type="text" placeholder="Name" required>
+            </div>
+            <div id="C_Child3Age" style="width:20%; height:32px">
+                <input id="Child3Age" name="Child3Age" type="text" placeholder="Age" required>
+            </div>
+            <div id="C_Child3Menu" style="width:20%; height:32px">
+                <select id="Child3Menu" name="Child3Menu">
+                    <option value="No Food">None</option>
+                    <option value="Child Menu">Child Menu</option>
+                    <option value="Full Menu">Full Menu</option>
+                </select>
+            </div>
+
+            <!--Fourth Child -->
+            <div id="C_Child4Name" style="width:60%; height:32px">
+                <input id="Child4Name" name="Child4Name" type="text" placeholder="Name" required>
+            </div>
+            <div id="C_Child4Age" style="width:20%; height:32px">
+                <input id="Child4Age" name="Child4Age" type="text" placeholder="Age" required>
+            </div>
+            <div id="C_Child4Menu" style="width:20%; height:32px">
+                <select id="Child4Menu" name="Child4Menu">
+                    <option value="No Food">None</option>
+                    <option value="Child Menu">Child Menu</option>
+                    <option value="Full Menu">Full Menu</option>
+                </select>
+            </div>
+
+            <!--Fifth Child -->
+            <div id="C_Child5Name" style="width:60%; height:32px">
+                <input id="Child5Name" name="Child5Name" type="text" placeholder="Name" required>
+            </div>
+            <div id="C_Child5Age" style="width:20%; height:32px">
+                <input id="Child5Age" name="Child5Age" type="text" placeholder="Age" required>
+            </div>
+            <div id="C_Child5Menu" style="width:20%; height:32px">
+                <select id="Child5Menu" name="Child5Menu">
+                    <option value="No Food">None</option>
+                    <option value="Child Menu">Child Menu</option>
+                    <option value="Full Menu">Full Menu</option>
+                </select>
+            </div>
+
+            <!--Dietary Restrictions -->
+            <div style="width:100%">
+                <p>Dietary Restrictions</p>
+                <span class="resize-input" style="width:100%; vertical-align:top">
+                <input style="vertical-align:top;" name="DietaryRestrictions" type="text" placeholder="None">
+            </span>
+            </div>
+
+            <!--Submission button-->
+            <br>
+            <br>
+            <button type="submit"><b>SUBMIT</b></button>
+        </form>
+    </div>
+
+    <div class="shadow-kiss"></div>
+
+</div>
+
+<!--Script to hide/un-hide children inputs-->
+<script>
+    function onChildrenUpdated() {
+        const children = document.getElementById("Children");
+        const count = parseInt(children.value)
+        try {
+            if (count >= 5) {
+                document.getElementById("C_Child5Name").style.display = "block";
+                document.getElementById("C_Child5Age").style.display = "block";
+                document.getElementById("C_Child5Menu").style.display = "block";
+                document.getElementById("Child5Name").disabled = false;
+                document.getElementById("Child5Age").disabled = false;
+                document.getElementById("Child5Menu").disabled = false;
+            }
+            if (count >= 4) {
+                document.getElementById("C_Child4Name").style.display = "block";
+                document.getElementById("C_Child4Age").style.display = "block";
+                document.getElementById("C_Child4Menu").style.display = "block";
+                document.getElementById("Child4Name").disabled = false;
+                document.getElementById("Child4Age").disabled = false;
+                document.getElementById("Child4Menu").disabled = false;
+            }
+            if (count >= 3) {
+                document.getElementById("C_Child3Name").style.display = "block";
+                document.getElementById("C_Child3Age").style.display = "block";
+                document.getElementById("C_Child3Menu").style.display = "block";
+                document.getElementById("Child3Name").disabled = false;
+                document.getElementById("Child3Age").disabled = false;
+                document.getElementById("Child3Menu").disabled = false;
+            }
+            if (count >= 2) {
+                document.getElementById("C_Child2Name").style.display = "block";
+                document.getElementById("C_Child2Age").style.display = "block";
+                document.getElementById("C_Child2Menu").style.display = "block";
+                document.getElementById("Child2Name").disabled = false;
+                document.getElementById("Child2Age").disabled = false;
+                document.getElementById("Child2Menu").disabled = false;
+            }
+            if (count >= 1) {
+                document.getElementById("C_Child1Name").style.display = "block";
+                document.getElementById("C_Child1Age").style.display = "block";
+                document.getElementById("C_Child1Menu").style.display = "block";
+                document.getElementById("Child1Name").disabled = false;
+                document.getElementById("Child1Age").disabled = false;
+                document.getElementById("Child1Menu").disabled = false;
+            }
+            if (count <= 0) {
+                document.getElementById("Child1Name").disabled = true;
+                document.getElementById("Child1Age").disabled = true;
+                document.getElementById("Child1Menu").disabled = true;
+                document.getElementById("C_Child1Name").style.display = "none";
+                document.getElementById("C_Child1Age").style.display = "none";
+                document.getElementById("C_Child1Menu").style.display = "none";
+            }
+            if (count <= 1) {
+                document.getElementById("Child2Name").disabled = true;
+                document.getElementById("Child2Age").disabled = true;
+                document.getElementById("Child2Menu").disabled = true;
+                document.getElementById("C_Child2Name").style.display = "none";
+                document.getElementById("C_Child2Age").style.display = "none";
+                document.getElementById("C_Child2Menu").style.display = "none";
+            }
+            if (count <= 2) {
+                document.getElementById("Child3Name").disabled = true;
+                document.getElementById("Child3Age").disabled = true;
+                document.getElementById("Child3Menu").disabled = true;
+                document.getElementById("C_Child3Name").style.display = "none";
+                document.getElementById("C_Child3Age").style.display = "none";
+                document.getElementById("C_Child3Menu").style.display = "none";
+            }
+            if (count <= 3) {
+                document.getElementById("Child4Name").disabled = true;
+                document.getElementById("Child4Age").disabled = true;
+                document.getElementById("Child4Menu").disabled = true;
+                document.getElementById("C_Child4Name").style.display = "none";
+                document.getElementById("C_Child4Age").style.display = "none";
+                document.getElementById("C_Child4Menu").style.display = "none";
+            }
+            if (count <= 4) {
+                document.getElementById("Child5Name").disabled = true;
+                document.getElementById("Child5Age").disabled = true;
+                document.getElementById("Child5Menu").disabled = true;
+                document.getElementById("C_Child5Name").style.display = "none";
+                document.getElementById("C_Child5Age").style.display = "none";
+                document.getElementById("C_Child5Menu").style.display = "none";
+            }
+        } catch (error) {
+            window.alert(error.message + "\n" + error.stackTrace)
+        }
+    }
+</script>
+
+<!--Event listener to call the children update method on document load-->
+<script>
+    window.onload = function() {
+        onChildrenUpdated();
+    };
+</script>
+
+<!--Event listener for form submission-->
 <script>
     window.addEventListener("load", function () {
         const form = document.getElementById('wedding-registration');
