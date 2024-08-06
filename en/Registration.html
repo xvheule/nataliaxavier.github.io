@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Natalia & Xavier</title>
+
+    <link rel="stylesheet" href="../css/text-styles.css">
+    <link rel="stylesheet" href="../css/inline-fonts.css">
+    <link rel="stylesheet" href="../css/page-layout.css">
+
+</head>
+
+<body>
+
+<div class="nav-bar">
+    <a href="../en/Invitation.html">Wedding</a>
+    <a href="../en/Information.html">Úbeda</a>
+    <a class="active" href="../en/Registration.html">Register</a>
+    <div class="nav-bar-right">
+        <a href="../en/Information.html"><img src="../media/img/flag_uk.png"></a>
+        <a href="../es/Information.html"><img src="../media/img/flag_es.png"></a>
+        <a href="../nl/Information.html"><img src="../media/img/flag_be.png"></a>
+        <a href="../fr/Information.html"><img src="../media/img/flag_fr.png"></a>
+    </div>
+</div>
+
+<form
+        id="wedding-registration"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbzbx8MMKSQYbF50Vnd7hY-2bN46mW0ehiiCDs1_TiMhhyw0jRsdG9WDVbw-cpEK87BC/exec"
+>
+    <input name="FieldA" type="text" placeholder="field A" required>
+    <input name="FieldB" type="text" placeholder="field B" required>
+    <button type="submit">Send</button>
+</form>
+
+<script>
+    window.addEventListener("load", function () {
+        const form = document.getElementById('wedding-registration');
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const data = new FormData(form);
+            const action = e.target.action;
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+                .then(() => {
+                    alert("Success!");
+                })
+        });
+    });
+</script>
+
+</body>
+</html>
