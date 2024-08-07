@@ -2,11 +2,11 @@
 <html lang="en-GB">
 
 <head>
-    <meta charSet="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Natalia & Xavier</title>
-    <meta name="theme-color" content="#5a4b3d" />
 
     <style>
         body, html {
@@ -14,7 +14,9 @@
             margin: 0;
         }
 
-        .mySlides {display: none;}
+        .mySlides {
+            display: none;
+        }
 
         /* Slideshow container */
         .slideshow-container {
@@ -22,49 +24,53 @@
             height: 100%;
         }
 
-        /* Navigation bar container */
-        .nav-bar-container {
-            position: relative;
-            width: auto;
-            top: 50%;
-            right: 0;
-        }
-
         /* The navigation bar */
-        .nav-bar {
-            width: 5%;
+        .nav-bar-container {
             position: absolute;
-            top: 50%;
-            right: 0;
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+            width: 25%;
+            min-width:350px;
+            height: auto;
+            bottom: 0;
+            left: 37.5%;
+            transform: translate(0, 0);
             background-color: #555555;
         }
 
+        .nav-bar-flag-container {
+            width: 25%;
+            height: 100%;
+            float: left;
+        }
+
         /* Navigation bar links */
-        .nav-bar a {
+        .nav-bar-container a {
             display: block;
-            text-align: center;
             padding: 5%;
             transition: all 0.3s ease;
             color: white;
+            margin: 2px 0 2px 0;
         }
-        .nav-bar a:hover {
+
+        .nav-bar-container a:hover {
             background-color: #ddd;
             color: black;
         }
 
         /* Title text container */
         .title-text-container {
-            position: absolute;
+            position: fixed;
+            top: 10px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
         }
 
-        /* Title text */
-        .title-text {
-            position: absolute;
-            top: 5px;
-            left: 2%;
-            font-size: 3vw;
+        .title-text-container h1 {
+            font-family: Montserrat, serif;
+            font-size: 5vw;
+            color: white;
+            white-space: nowrap;
+            text-align: center;
+            margin: 0;
         }
 
         /* background images*/
@@ -127,18 +133,34 @@
         }
 
         @keyframes fade {
-            from {opacity: .4}
-            to {opacity: 1}
+            from {
+                opacity: .4
+            }
+            to {
+                opacity: 1
+            }
         }
 
-        /* Use a media query to add a breakpoint to apply these settings if the width is smaller than 1600px: */
-        @media screen and (max-width: 1600px) {
-            .title-text {
-                left: 80px;
-                font-size: 32px;
+        /* Use a media query to add a breakpoint to apply these settings if the width is smaller than 800px: */
+        @media screen and (max-width: 800px) {
+            .title-text-container h1 {
+                font-size: 40px;
             }
-            .nav-bar {
-                width: 80px;
+        }
+
+        /* Use a media query to add a breakpoint to apply these settings if the width is smaller than 1400px: */
+        @media screen and (max-width: 1400px) {
+            .nav-bar-container {
+                left: 50%;
+                transform: translate(-175px, 0);
+            }
+        }
+
+        /* Use a media query to add a breakpoint to apply these settings if the width is smaller than 350px: */
+        @media screen and (max-width: 350px) {
+            .nav-bar-container {
+                left: 0;
+                transform: translate(0, 0);
             }
         }
     </style>
@@ -147,81 +169,26 @@
 
 <body>
 <div class="slideshow-container">
-    <div class="mySlides fade bg01">
-        <div class="nav-bar-container">
-            <div class="nav-bar">
-                <a href="en/Invitation.html"><img src="./media/img/flag_uk.png" width=100%></a>
-                <a href="es/Invitation.html"><img src="./media/img/flag_es.png" width=100%></a>
-                <a href="nl/Invitation.html"><img src="./media/img/flag_be.png" width=100%></a>
-                <a href="fr/Invitation.html"><img src="./media/img/flag_fr.png" width=100%></a>
-            </div>
-        </div>
-        <div class="title-text-container">
-            <div class="title-text">
-                <h1 style="color:white; font-family:verdana,serif;">
-                    Natalia
-                    <br>
-                    Xavier
-                </h1>
-            </div>
-        </div>
+    <div class="mySlides fade bg01"></div>
+    <div class="mySlides fade bg02"></div>
+    <div class="mySlides fade bg03"></div>
+    <div class="mySlides fade bg04"></div>
+</div>
+<div class="title-text-container">
+    <h1>Natalia & Xavier</h1>
+</div>
+<div class="nav-bar-container">
+    <div class="nav-bar-flag-container">
+        <a href="en/Invitation.html"><img src="./media/img/flag_uk.png" width=100%></a>
     </div>
-    <div class="mySlides fade bg02">
-        <div class="nav-bar-container">
-            <div class="nav-bar">
-                <a href="en/Invitation.html"><img src="./media/img/flag_uk.png" width=100%></a>
-                <a href="es/Invitation.html"><img src="./media/img/flag_es.png" width=100%></a>
-                <a href="nl/Invitation.html"><img src="./media/img/flag_be.png" width=100%></a>
-                <a href="fr/Invitation.html"><img src="./media/img/flag_fr.png" width=100%></a>
-            </div>
-        </div>
-        <div class="title-text-container">
-            <div class="title-text">
-                <h1 style="color:white; font-family:verdana,serif;">
-                    Natalia
-                    <br>
-                    Xavier
-                </h1>
-            </div>
-        </div>
+    <div class="nav-bar-flag-container">
+        <a href="es/Invitation.html"><img src="./media/img/flag_es.png" width=100%></a>
     </div>
-    <div class="mySlides fade bg03">
-        <div class="nav-bar-container">
-            <div class="nav-bar">
-                <a href="en/Invitation.html"><img src="./media/img/flag_uk.png" width=100%></a>
-                <a href="es/Invitation.html"><img src="./media/img/flag_es.png" width=100%></a>
-                <a href="nl/Invitation.html"><img src="./media/img/flag_be.png" width=100%></a>
-                <a href="fr/Invitation.html"><img src="./media/img/flag_fr.png" width=100%></a>
-            </div>
-        </div>
-        <div class="title-text-container">
-            <div class="title-text">
-                <h1 style="color:white; font-family:verdana,serif;">
-                    Natalia
-                    <br>
-                    Xavier
-                </h1>
-            </div>
-        </div>
+    <div class="nav-bar-flag-container">
+        <a href="nl/Invitation.html"><img src="./media/img/flag_be.png" width=100%></a>
     </div>
-    <div class="mySlides fade bg04">
-        <div class="nav-bar-container">
-            <div class="nav-bar">
-                <a href="en/Invitation.html"><img src="./media/img/flag_uk.png" width=100%></a>
-                <a href="es/Invitation.html"><img src="./media/img/flag_es.png" width=100%></a>
-                <a href="nl/Invitation.html"><img src="./media/img/flag_be.png" width=100%></a>
-                <a href="fr/Invitation.html"><img src="./media/img/flag_fr.png" width=100%></a>
-            </div>
-        </div>
-        <div class="title-text-container">
-            <div class="title-text">
-                <h1 style="color:white; font-family:verdana,serif;">
-                    Natalia
-                    <br>
-                    Xavier
-                </h1>
-            </div>
-        </div>
+    <div class="nav-bar-flag-container">
+        <a href="fr/Invitation.html"><img src="./media/img/flag_fr.png" width=100%></a>
     </div>
 </div>
 
@@ -236,8 +203,10 @@
             slides[i].style.display = "none";
         }
         slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}
-        slides[slideIndex-1].style.display = "block";
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        slides[slideIndex - 1].style.display = "block";
         setTimeout(showSlides, 3000); // Change image every 3 seconds
     }
 </script>
