@@ -65,10 +65,10 @@
 
             <!--First guest name & attendance-->
             <div style="width:40%; height:32px">
-                <input id="Guest1FirstName" name="Guest1FirstName" type="text" placeholder="First" required>
+                <input id="Guest1FirstName" name="Guest1FirstName" type="text" placeholder="First Name" required>
             </div>
             <div style="width:40%; height:32px">
-                <input id="Guest1SurName" name="Guest1SurName" type="text" placeholder="Last" required>
+                <input id="Guest1SurName" name="Guest1SurName" type="text" placeholder="Last Name" required>
             </div>
             <div style="width:20%; height:32px">
                 <select id="Attending" name="Attending">
@@ -79,13 +79,14 @@
 
             <!--Second guest name -->
             <div style="width:40%; height:32px">
-                <input id="Guest2FirstName" name="Guest2FirstName" type="text" placeholder="First" required>
+                <input id="Guest2FirstName" name="Guest2FirstName" type="text" placeholder="First Name" required>
             </div>
             <div style="width:40%; height:32px">
-                <input id="Guest2SurName" name="Guest2SurName" type="text" placeholder="Last" required>
+                <input id="Guest2SurName" name="Guest2SurName" type="text" placeholder="Last Name" required>
             </div>
             <div style="width:20%; height:32px">
                 <div style="width:10%; height:32px">
+                    <input type="hidden" id="HasPlusOneDefault" name="HasPlusOne" value="yes">
                     <input type="checkbox" id="HasPlusOne" name="HasPlusOne" value="no" onchange="onPartnerCheckBoxChange()">
                 </div>
                 <div style="width:90%; height:32px">
@@ -111,77 +112,112 @@
 
 
             <!--First Child -->
-            <div id="C_Child1Name" style="width:60%; height:32px">
+            <div id="C_Child1Name" style="width:50%; height:32px">
                 <input id="Child1Name" name="Child1Name" type="text" placeholder="Name" required>
             </div>
-            <div id="C_Child1Age" style="width:20%; height:32px">
-                <input id="Child1Age" name="Child1Age" type="text" placeholder="Age" required>
+            <div id="C_Child1Age" style="width:8%; height:32px; min-width:16px;">
+                <input id="Child1Age" name="Child1Age" type="number" placeholder="Age" required>
             </div>
+            <div style="width:2%; height:32px"></div>
             <div id="C_Child1Menu" style="width:20%; height:32px">
                 <select id="Child1Menu" name="Child1Menu">
-                    <option value="No Food">None</option>
+                    <option value="No Food">No Food</option>
                     <option value="Child Menu">Child Menu</option>
                     <option value="Full Menu">Full Menu</option>
+                </select>
+            </div>
+            <div id="C_Child1Chair" style="width:20%; height:32px">
+                <select id="Child1Chair" name="Child1Chair">
+                    <option value="No">No High Chair</option>
+                    <option value="Yes">High Chair</option>
                 </select>
             </div>
 
             <!--Second Child -->
-            <div id="C_Child2Name" style="width:60%; height:32px">
+            <div id="C_Child2Name" style="width:50%; height:32px">
                 <input id="Child2Name" name="Child2Name" type="text" placeholder="Name" required>
             </div>
-            <div id="C_Child2Age" style="width:20%; height:32px">
-                <input id="Child2Age" name="Child2Age" type="text" placeholder="Age" required>
+            <div id="C_Child2Age" style="width:8%; height:32px">
+                <input id="Child2Age" name="Child2Age" type="number" placeholder="Age" required>
             </div>
+            <div style="width:2%; height:32px"></div>
             <div id="C_Child2Menu" style="width:20%; height:32px">
                 <select id="Child2Menu" name="Child2Menu">
-                    <option value="No Food">None</option>
+                    <option value="No Food">No Food</option>
                     <option value="Child Menu">Child Menu</option>
                     <option value="Full Menu">Full Menu</option>
+                </select>
+            </div>
+            <div id="C_Child2Chair" style="width:20%; height:32px">
+                <select id="Child2Chair" name="Child2Chair">
+                    <option value="No">No High Chair</option>
+                    <option value="Yes">High Chair</option>
                 </select>
             </div>
 
             <!--Third Child -->
-            <div id="C_Child3Name" style="width:60%; height:32px">
+            <div id="C_Child3Name" style="width:50%; height:32px">
                 <input id="Child3Name" name="Child3Name" type="text" placeholder="Name" required>
             </div>
-            <div id="C_Child3Age" style="width:20%; height:32px">
-                <input id="Child3Age" name="Child3Age" type="text" placeholder="Age" required>
+            <div id="C_Child3Age" style="width:8%; height:32px">
+                <input id="Child3Age" name="Child3Age" type="number" placeholder="Age" required>
             </div>
+            <div style="width:2%; height:32px"></div>
             <div id="C_Child3Menu" style="width:20%; height:32px">
                 <select id="Child3Menu" name="Child3Menu">
-                    <option value="No Food">None</option>
+                    <option value="No Food">No Food</option>
                     <option value="Child Menu">Child Menu</option>
                     <option value="Full Menu">Full Menu</option>
+                </select>
+            </div>
+            <div id="C_Child3Chair" style="width:20%; height:32px">
+                <select id="Child3Chair" name="Child3Chair">
+                    <option value="No">No High Chair</option>
+                    <option value="Yes">High Chair</option>
                 </select>
             </div>
 
             <!--Fourth Child -->
-            <div id="C_Child4Name" style="width:60%; height:32px">
+            <div id="C_Child4Name" style="width:50%; height:32px">
                 <input id="Child4Name" name="Child4Name" type="text" placeholder="Name" required>
             </div>
-            <div id="C_Child4Age" style="width:20%; height:32px">
-                <input id="Child4Age" name="Child4Age" type="text" placeholder="Age" required>
+            <div id="C_Child4Age" style="width:8%; height:32px">
+                <input id="Child4Age" name="Child4Age" type="number" placeholder="Age" required>
             </div>
+            <div style="width:2%; height:32px"></div>
             <div id="C_Child4Menu" style="width:20%; height:32px">
                 <select id="Child4Menu" name="Child4Menu">
-                    <option value="No Food">None</option>
+                    <option value="No Food">No Food</option>
                     <option value="Child Menu">Child Menu</option>
                     <option value="Full Menu">Full Menu</option>
                 </select>
             </div>
+            <div id="C_Child4Chair" style="width:20%; height:32px">
+                <select id="Child4Chair" name="Child4Chair">
+                    <option value="No">No High Chair</option>
+                    <option value="Yes">High Chair</option>
+                </select>
+            </div>
 
             <!--Fifth Child -->
-            <div id="C_Child5Name" style="width:60%; height:32px">
+            <div id="C_Child5Name" style="width:50%; height:32px">
                 <input id="Child5Name" name="Child5Name" type="text" placeholder="Name" required>
             </div>
-            <div id="C_Child5Age" style="width:20%; height:32px">
-                <input id="Child5Age" name="Child5Age" type="text" placeholder="Age" required>
+            <div id="C_Child5Age" style="width:8%; height:32px">
+                <input id="Child5Age" name="Child5Age" type="number" placeholder="Age" required>
             </div>
+            <div style="width:2%; height:32px"></div>
             <div id="C_Child5Menu" style="width:20%; height:32px">
                 <select id="Child5Menu" name="Child5Menu">
-                    <option value="No Food">None</option>
+                    <option value="No Food">No Food</option>
                     <option value="Child Menu">Child Menu</option>
                     <option value="Full Menu">Full Menu</option>
+                </select>
+            </div>
+            <div id="C_Child5Chair" style="width:20%; height:32px">
+                <select id="Child5Chair" name="Child5Chair">
+                    <option value="No">No High Chair</option>
+                    <option value="Yes">High Chair</option>
                 </select>
             </div>
 
@@ -189,8 +225,9 @@
             <div style="width:100%">
                 <p>Dietary Restrictions</p>
                 <span class="resize-input" style="width:100%; vertical-align:top">
-                <input style="vertical-align:top;" name="DietaryRestrictions" type="text" placeholder="None">
-            </span>
+                    <input type="hidden" id="DietaryRestrictionsDefault" name="DietaryRestrictions" value="None">
+                    <input style="vertical-align:top;" name="DietaryRestrictions" type="text" placeholder="None">
+                </span>
             </div>
 
             <!--Submission button-->
@@ -234,81 +271,101 @@
                 document.getElementById("C_Child5Name").style.display = "block";
                 document.getElementById("C_Child5Age").style.display = "block";
                 document.getElementById("C_Child5Menu").style.display = "block";
+                document.getElementById("C_Child5Chair").style.display = "block";
                 document.getElementById("Child5Name").disabled = false;
                 document.getElementById("Child5Age").disabled = false;
                 document.getElementById("Child5Menu").disabled = false;
+                document.getElementById("Child5Chair").disabled = false;
             }
             if (count >= 4) {
                 document.getElementById("C_Child4Name").style.display = "block";
                 document.getElementById("C_Child4Age").style.display = "block";
                 document.getElementById("C_Child4Menu").style.display = "block";
+                document.getElementById("C_Child4Chair").style.display = "block";
                 document.getElementById("Child4Name").disabled = false;
                 document.getElementById("Child4Age").disabled = false;
                 document.getElementById("Child4Menu").disabled = false;
+                document.getElementById("Child4Chair").disabled = false;
             }
             if (count >= 3) {
                 document.getElementById("C_Child3Name").style.display = "block";
                 document.getElementById("C_Child3Age").style.display = "block";
                 document.getElementById("C_Child3Menu").style.display = "block";
+                document.getElementById("C_Child3Chair").style.display = "block";
                 document.getElementById("Child3Name").disabled = false;
                 document.getElementById("Child3Age").disabled = false;
                 document.getElementById("Child3Menu").disabled = false;
+                document.getElementById("Child3Chair").disabled = false;
             }
             if (count >= 2) {
                 document.getElementById("C_Child2Name").style.display = "block";
                 document.getElementById("C_Child2Age").style.display = "block";
                 document.getElementById("C_Child2Menu").style.display = "block";
+                document.getElementById("C_Child2Chair").style.display = "block";
                 document.getElementById("Child2Name").disabled = false;
                 document.getElementById("Child2Age").disabled = false;
                 document.getElementById("Child2Menu").disabled = false;
+                document.getElementById("Child2Chair").disabled = false;
             }
             if (count >= 1) {
                 document.getElementById("C_Child1Name").style.display = "block";
                 document.getElementById("C_Child1Age").style.display = "block";
                 document.getElementById("C_Child1Menu").style.display = "block";
+                document.getElementById("C_Child1Chair").style.display = "block";
                 document.getElementById("Child1Name").disabled = false;
                 document.getElementById("Child1Age").disabled = false;
                 document.getElementById("Child1Menu").disabled = false;
+                document.getElementById("Child1Chair").disabled = false;
             }
             if (count <= 0) {
                 document.getElementById("Child1Name").disabled = true;
                 document.getElementById("Child1Age").disabled = true;
                 document.getElementById("Child1Menu").disabled = true;
+                document.getElementById("Child1Chair").disabled = true;
                 document.getElementById("C_Child1Name").style.display = "none";
                 document.getElementById("C_Child1Age").style.display = "none";
                 document.getElementById("C_Child1Menu").style.display = "none";
+                document.getElementById("C_Child1Chair").style.display = "none";
             }
             if (count <= 1) {
                 document.getElementById("Child2Name").disabled = true;
                 document.getElementById("Child2Age").disabled = true;
                 document.getElementById("Child2Menu").disabled = true;
+                document.getElementById("Child2Chair").disabled = true;
                 document.getElementById("C_Child2Name").style.display = "none";
                 document.getElementById("C_Child2Age").style.display = "none";
                 document.getElementById("C_Child2Menu").style.display = "none";
+                document.getElementById("C_Child2Chair").style.display = "none";
             }
             if (count <= 2) {
                 document.getElementById("Child3Name").disabled = true;
                 document.getElementById("Child3Age").disabled = true;
                 document.getElementById("Child3Menu").disabled = true;
+                document.getElementById("Child3Chair").disabled = true;
                 document.getElementById("C_Child3Name").style.display = "none";
                 document.getElementById("C_Child3Age").style.display = "none";
                 document.getElementById("C_Child3Menu").style.display = "none";
+                document.getElementById("C_Child3Chair").style.display = "none";
             }
             if (count <= 3) {
                 document.getElementById("Child4Name").disabled = true;
                 document.getElementById("Child4Age").disabled = true;
                 document.getElementById("Child4Menu").disabled = true;
+                document.getElementById("Child4Chair").disabled = true;
                 document.getElementById("C_Child4Name").style.display = "none";
                 document.getElementById("C_Child4Age").style.display = "none";
                 document.getElementById("C_Child4Menu").style.display = "none";
+                document.getElementById("C_Child4Chair").style.display = "none";
             }
             if (count <= 4) {
                 document.getElementById("Child5Name").disabled = true;
                 document.getElementById("Child5Age").disabled = true;
                 document.getElementById("Child5Menu").disabled = true;
+                document.getElementById("Child5Chair").disabled = true;
                 document.getElementById("C_Child5Name").style.display = "none";
                 document.getElementById("C_Child5Age").style.display = "none";
                 document.getElementById("C_Child5Menu").style.display = "none";
+                document.getElementById("C_Child5Chair").style.display = "none";
             }
         } catch (error) {
             window.alert(error.message + "\n" + error.stackTrace);

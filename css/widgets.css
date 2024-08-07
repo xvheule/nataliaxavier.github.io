@@ -110,12 +110,12 @@ form button {
     cursor: pointer;
     width: auto;
     border-radius: 25px;
-    margin-left: 5%;
+    margin-left: 0;
     margin-right: 5%;
     margin-top: 20px;
 }
 
 form button:hover {
     color: white;
-    background-color: #6a884c;
+    background-color: black;
 }
