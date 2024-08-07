@@ -16,7 +16,7 @@
     <style>
         .shadow-kiss {
             /* The image used */
-            background-image: url("../media/img/shadow_kiss.JPG");
+            background-image: url("../media/img/shadow_kiss.jpg");
 
             /* Full height */
             height: 100%;
@@ -86,7 +86,7 @@
             </div>
             <div style="width:20%; height:32px">
                 <div style="width:10%; height:32px">
-                    <input type="checkbox" id="HasPlusOne" name="HasPlusOne" value="no">
+                    <input type="checkbox" id="HasPlusOne" name="HasPlusOne" value="no" onchange="onPartnerCheckBoxChange()">
                 </div>
                 <div style="width:90%; height:32px">
                     <label for="HasPlusOne">No partner</label>
@@ -204,6 +204,26 @@
 
 </div>
 
+
+<!--Script to enable/disable partner input-->
+<script>
+    function onPartnerCheckBoxChange() {
+       const checkbox = document.getElementById("HasPlusOne");
+       const checked = checkbox.checked;
+       try {
+           if (checked) {
+               document.getElementById("Guest2FirstName").disabled = true;
+               document.getElementById("Guest2SurName").disabled = true;
+           } else {
+               document.getElementById("Guest2FirstName").disabled = false;
+               document.getElementById("Guest2SurName").disabled = false;
+           }
+       } catch (error) {
+           window.alert(error.message + "\n" + error.stackTrace);
+       }
+    }
+</script>
+
 <!--Script to hide/un-hide children inputs-->
 <script>
     function onChildrenUpdated() {
@@ -291,7 +311,7 @@
                 document.getElementById("C_Child5Menu").style.display = "none";
             }
         } catch (error) {
-            window.alert(error.message + "\n" + error.stackTrace)
+            window.alert(error.message + "\n" + error.stackTrace);
         }
     }
 </script>
