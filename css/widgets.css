@@ -9,9 +9,7 @@
     cursor: pointer;
     width: auto;
     border-radius: 25px;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 0;
+    margin: 0 5% 20px;
 }
 
 .button:hover {
@@ -110,9 +108,7 @@ form button {
     cursor: pointer;
     width: auto;
     border-radius: 25px;
-    margin-left: 0;
-    margin-right: 5%;
-    margin-top: 20px;
+    margin: 20px 5% 20px 0;
 }
 
 form button:hover {
