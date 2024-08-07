@@ -12,6 +12,7 @@
         body, html {
             height: 100%;
             margin: 0;
+            overflow-y: hidden;
         }
 
         .mySlides {
@@ -30,12 +31,19 @@
             width: 25%;
             min-width:350px;
             height: auto;
-            bottom: 0;
+            bottom: -4vw;
             left: 37.5%;
             transform: translate(0, 0);
             background-color: #555555;
             border-top-left-radius: 1vw;
             border-top-right-radius: 1vw;
+            opacity: 0.5;
+            transition: 0.5s;
+        }
+
+        .nav-bar-container:hover {
+            transform: translateY(-4vw);
+            opacity: 1;
         }
 
         .nav-bar-flag-container {
@@ -156,21 +164,17 @@
         @media screen and (max-width: 1400px) {
             .nav-bar-container {
                 left: 50%;
+                bottom: -56px;
                 transform: translate(-175px, 0);
                 border-top-left-radius: 14px;
                 border-top-right-radius: 14px;
             }
+            .nav-bar-container:hover {
+                transform: translate(-175px, -56px);
+            }
             .nav-bar-container a {
                 border-top-left-radius: 14px;
                 border-top-right-radius: 14px;
-            }
-        }
-
-        /* Use a media query to add a breakpoint to apply these settings if the width is smaller than 350px: */
-        @media screen and (max-width: 350px) {
-            .nav-bar-container {
-                left: 0;
-                transform: translate(0, 0);
             }
         }
     </style>
