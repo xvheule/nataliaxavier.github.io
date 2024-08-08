@@ -35,9 +35,9 @@
 
 <div class="nav-bar">
     <a href="../index.html"><i class="fa fa-home"></i></a>
-    <a href="invitation.html">Wedding</a>
+    <a href="invitation.html">Huwelijk</a>
     <a href="information.html">Úbeda</a>
-    <a class="active" href="registration.html">Register</a>
+    <a class="active" href="registration.html">Registratie</a>
     <div class="nav-bar-right">
         <a href="../en/registration.html"><img src="../media/img/flag_uk.png"></a>
         <a href="../es/registration.html"><img src="../media/img/flag_es.png"></a>
@@ -49,7 +49,7 @@
 
 <div class="content-double">
     <div style="background-color:#5a4b3d;">
-        <h3>Confirm Attendance</h3>
+        <h3>Bevestig Aanwezigheid</h3>
 
         <form
                 id="wedding-registration"
@@ -59,32 +59,32 @@
 
             <!--Form heading-->
             <div style="width:80%;">
-                <p>Names</p>
+                <p>Namen</p>
             </div>
             <div style="width:20%;">
-                <p>Attendance</p>
+                <p>Aanwezigheid</p>
             </div>
 
             <!--First guest name & attendance-->
             <div style="width:40%; height:32px">
-                <input id="Guest1FirstName" name="Guest1FirstName" type="text" placeholder="First Name" required>
+                <input id="Guest1FirstName" name="Guest1FirstName" type="text" placeholder="Voornaam" required>
             </div>
             <div style="width:40%; height:32px">
-                <input id="Guest1SurName" name="Guest1SurName" type="text" placeholder="Last Name" required>
+                <input id="Guest1SurName" name="Guest1SurName" type="text" placeholder="Familienaam" required>
             </div>
             <div style="width:20%; height:32px">
                 <select id="Attending" name="Attending">
-                    <option value="yes">Attending</option>
-                    <option value="no">Excused</option>
+                    <option value="yes">Aanwezig</option>
+                    <option value="no">Geëxcuseerd</option>
                 </select>
             </div>
 
             <!--Second guest name -->
             <div style="width:40%; height:32px">
-                <input id="Guest2FirstName" name="Guest2FirstName" type="text" placeholder="First Name" required>
+                <input id="Guest2FirstName" name="Guest2FirstName" type="text" placeholder="Voornaam" required>
             </div>
             <div style="width:40%; height:32px">
-                <input id="Guest2SurName" name="Guest2SurName" type="text" placeholder="Last Name" required>
+                <input id="Guest2SurName" name="Guest2SurName" type="text" placeholder="Familienaam" required>
             </div>
             <div style="width:20%; height:32px">
                 <div style="width:10%; height:32px">
@@ -92,13 +92,13 @@
                     <input type="checkbox" id="HasPlusOne" name="HasPlusOne" value="no" onchange="onPartnerCheckBoxChange()">
                 </div>
                 <div style="width:90%; height:32px">
-                    <label for="HasPlusOne">No partner</label>
+                    <label for="HasPlusOne">Zonder partner</label>
                 </div>
             </div>
 
             <!--Children -->
             <div style="width:100%;">
-                <p>Children</p>
+                <p>Kinderen</p>
             </div>
             <div style="width:20%; height:32px">
                 <select id="Children" name="Children" onchange="onChildrenUpdated()">
@@ -115,23 +115,23 @@
 
             <!--First Child -->
             <div id="C_Child1Name" style="width:50%; height:32px">
-                <input id="Child1Name" name="Child1Name" type="text" placeholder="Name" required>
+                <input id="Child1Name" name="Child1Name" type="text" placeholder="Naam" required>
             </div>
             <div id="C_Child1Age" style="width:8%; height:32px; min-width:16px;">
-                <input id="Child1Age" name="Child1Age" type="number" placeholder="Age" required>
+                <input id="Child1Age" name="Child1Age" type="number" placeholder="Leeftijd" required>
             </div>
             <div style="width:2%; height:32px"></div>
             <div id="C_Child1Menu" style="width:20%; height:32px">
                 <select id="Child1Menu" name="Child1Menu">
-                    <option value="No Food">No Food</option>
-                    <option value="Child Menu">Child Menu</option>
-                    <option value="Full Menu">Full Menu</option>
+                    <option value="No Food">Geen menu</option>
+                    <option value="Child Menu">Kindermenu</option>
+                    <option value="Full Menu">Standaard Menu</option>
                 </select>
             </div>
             <div id="C_Child1Chair" style="width:20%; height:32px">
                 <select id="Child1Chair" name="Child1Chair">
-                    <option value="No">No High Chair</option>
-                    <option value="Yes">High Chair</option>
+                    <option value="No">Gewone stoel</option>
+                    <option value="Yes">Kinderstoel</option>
                 </select>
             </div>
 
@@ -140,20 +140,20 @@
                 <input id="Child2Name" name="Child2Name" type="text" placeholder="Name" required>
             </div>
             <div id="C_Child2Age" style="width:8%; height:32px">
-                <input id="Child2Age" name="Child2Age" type="number" placeholder="Age" required>
+                <input id="Child2Age" name="Child2Age" type="number" placeholder="Leeftijd" required>
             </div>
             <div style="width:2%; height:32px"></div>
             <div id="C_Child2Menu" style="width:20%; height:32px">
                 <select id="Child2Menu" name="Child2Menu">
-                    <option value="No Food">No Food</option>
-                    <option value="Child Menu">Child Menu</option>
-                    <option value="Full Menu">Full Menu</option>
+                    <option value="No Food">Geen menu</option>
+                    <option value="Child Menu">Kindermenu</option>
+                    <option value="Full Menu">Standaard Menu</option>
                 </select>
             </div>
             <div id="C_Child2Chair" style="width:20%; height:32px">
                 <select id="Child2Chair" name="Child2Chair">
-                    <option value="No">No High Chair</option>
-                    <option value="Yes">High Chair</option>
+                    <option value="No">Gewone stoel</option>
+                    <option value="Yes">Kinderstoel</option>
                 </select>
             </div>
 
@@ -162,20 +162,20 @@
                 <input id="Child3Name" name="Child3Name" type="text" placeholder="Name" required>
             </div>
             <div id="C_Child3Age" style="width:8%; height:32px">
-                <input id="Child3Age" name="Child3Age" type="number" placeholder="Age" required>
+                <input id="Child3Age" name="Child3Age" type="number" placeholder="Leeftijd" required>
             </div>
             <div style="width:2%; height:32px"></div>
             <div id="C_Child3Menu" style="width:20%; height:32px">
                 <select id="Child3Menu" name="Child3Menu">
-                    <option value="No Food">No Food</option>
-                    <option value="Child Menu">Child Menu</option>
-                    <option value="Full Menu">Full Menu</option>
+                    <option value="No Food">Geen menu</option>
+                    <option value="Child Menu">Kindermenu</option>
+                    <option value="Full Menu">Standaard Menu</option>
                 </select>
             </div>
             <div id="C_Child3Chair" style="width:20%; height:32px">
                 <select id="Child3Chair" name="Child3Chair">
-                    <option value="No">No High Chair</option>
-                    <option value="Yes">High Chair</option>
+                    <option value="No">Gewone stoel</option>
+                    <option value="Yes">Kinderstoel</option>
                 </select>
             </div>
 
@@ -184,20 +184,20 @@
                 <input id="Child4Name" name="Child4Name" type="text" placeholder="Name" required>
             </div>
             <div id="C_Child4Age" style="width:8%; height:32px">
-                <input id="Child4Age" name="Child4Age" type="number" placeholder="Age" required>
+                <input id="Child4Age" name="Child4Age" type="number" placeholder="Leeftijd" required>
             </div>
             <div style="width:2%; height:32px"></div>
             <div id="C_Child4Menu" style="width:20%; height:32px">
                 <select id="Child4Menu" name="Child4Menu">
-                    <option value="No Food">No Food</option>
-                    <option value="Child Menu">Child Menu</option>
-                    <option value="Full Menu">Full Menu</option>
+                    <option value="No Food">Geen menu</option>
+                    <option value="Child Menu">Kindermenu</option>
+                    <option value="Full Menu">Standaard Menu</option>
                 </select>
             </div>
             <div id="C_Child4Chair" style="width:20%; height:32px">
                 <select id="Child4Chair" name="Child4Chair">
-                    <option value="No">No High Chair</option>
-                    <option value="Yes">High Chair</option>
+                    <option value="No">Gewone stoel</option>
+                    <option value="Yes">Kinderstoel</option>
                 </select>
             </div>
 
@@ -206,36 +206,36 @@
                 <input id="Child5Name" name="Child5Name" type="text" placeholder="Name" required>
             </div>
             <div id="C_Child5Age" style="width:8%; height:32px">
-                <input id="Child5Age" name="Child5Age" type="number" placeholder="Age" required>
+                <input id="Child5Age" name="Child5Age" type="number" placeholder="Leeftijd" required>
             </div>
             <div style="width:2%; height:32px"></div>
             <div id="C_Child5Menu" style="width:20%; height:32px">
                 <select id="Child5Menu" name="Child5Menu">
-                    <option value="No Food">No Food</option>
-                    <option value="Child Menu">Child Menu</option>
-                    <option value="Full Menu">Full Menu</option>
+                    <option value="No Food">Geen menu</option>
+                    <option value="Child Menu">Kindermenu</option>
+                    <option value="Full Menu">Standaard Menu</option>
                 </select>
             </div>
             <div id="C_Child5Chair" style="width:20%; height:32px">
                 <select id="Child5Chair" name="Child5Chair">
-                    <option value="No">No High Chair</option>
-                    <option value="Yes">High Chair</option>
+                    <option value="No">Gewone stoel</option>
+                    <option value="Yes">Kinderstoel</option>
                 </select>
             </div>
 
             <!--Dietary Restrictions -->
             <div style="width:100%">
-                <p>Dietary Restrictions</p>
+                <p>Voedselvoorkeuren en allergieën</p>
                 <span class="resize-input" style="width:100%; vertical-align:top">
                     <input type="hidden" id="DietaryRestrictionsDefault" name="DietaryRestrictions" value="None">
-                    <input style="vertical-align:top;" name="DietaryRestrictions" type="text" placeholder="None">
+                    <input style="vertical-align:top;" name="DietaryRestrictions" type="text" placeholder="Geen">
                 </span>
             </div>
 
             <!--Submission button-->
             <br>
             <br>
-            <button type="submit"><b>SUBMIT</b></button>
+            <button type="submit"><b>BEVESTIG</b></button>
         </form>
     </div>
 
