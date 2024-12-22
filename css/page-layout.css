@@ -53,6 +53,7 @@ div.content-double {
 }
 
 div.content-double div {
+    background-color: #5a4b3d;
     width: 50%;
     height: 100%;
     float: left;
@@ -86,6 +87,7 @@ div.content-triple div {
     }
     div.content-double div {
         width: 100%;
+
     }
     div.content-triple {
         width: 100%;
