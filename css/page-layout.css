@@ -44,6 +44,7 @@ div.content {
 }
 
 div.content-double {
+    background-color: #5a4b3d;
     width: 100%;
     top: 48px;
     bottom: 0;
