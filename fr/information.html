@@ -234,7 +234,7 @@
 
     <div style="position:relative;">
         <div style="display:inline-block; overflow:hidden;width:100%;">
-            <iframe style="position:relative; top:-66px; bottom:0; border:none;"
+            <iframe id="map" style="position:relative; top:-66px; bottom:0; border:none;"
                     src="https://www.google.com/maps/d/embed?mid=11nQVqcZiGG4MLkzHopyILf25ngjb69E&ehbc=2E312F"
                     width=100% height=110%></iframe>
         </div>
@@ -270,6 +270,7 @@
 <script>
     function openPage(pageName, elmnt, color) {
         var i, tabcontent, tablinks;
+        // set the active tab
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
             tabcontent[i].style.display = "none";
@@ -282,6 +283,36 @@
         elmnt.style.color = "white"
         document.getElementById(pageName).style.display = "block";
         elmnt.style.backgroundColor = color;
+        // update the map
+        switch (pageName) {
+            case "Tab1":
+                document.getElementById("map").src = "https://www.google.com/maps/d/u/0/embed?mid=1xJydFjrAke2cwmk7qtnGK-jAboopeac&ehbc=2E312F";
+                break;
+            case "Tab2":
+                document.getElementById("map").src = "https://www.google.com/maps/d/u/0/embed?mid=1TOMS2NOW0A7Y5zszTzLmpkrUyG2uvd8&ehbc=2E312F";
+                break;
+            case "Tab3":
+                document.getElementById("map").src = "https://www.google.com/maps/d/u/0/embed?mid=1yTP95LsoBQM_wZPHyRXwBNtI3cd8YeU&ehbc=2E312F";
+                break;
+            case "Tab4":
+                document.getElementById("map").src = "https://www.google.com/maps/d/u/0/embed?mid=1SaLxjdX37nENgXEedNd-z7tYTPoRclY&ehbc=2E312F";
+                break;
+            case "Tab5":
+                document.getElementById("map").src = "https://www.google.com/maps/d/u/0/embed?mid=1I5itHVnZXzCY0E_ubjuEe15zKj7CEmg&ehbc=2E312F";
+                break;
+            case "Tab6":
+                document.getElementById("map").src = "https://www.google.com/maps/d/u/0/embed?mid=1G_SvEoS-Tb-WClgtd9DIql4OekOeAfI&ehbc=2E312F";
+                break;
+            case "Tab7":
+                document.getElementById("map").src = "https://www.google.com/maps/d/u/0/embed?mid=11MG1PA3XDKKpBPgNxMEbkOcQREcTvcY&ehbc=2E312F";
+                break;
+            case "Tab8":
+                document.getElementById("map").src = "https://www.google.com/maps/d/u/0/embed?mid=181VfsRbm4Kacj3zIyhiiBUE0jwHX7YM&ehbc=2E312F";
+                break;
+            default:
+                document.getElementById("map").src = "https://www.google.com/maps/d/embed?mid=11nQVqcZiGG4MLkzHopyILf25ngjb69E&ehbc=2E312F";
+                break;
+        }
     }
 
     // Get the element with id="defaultOpen" and click on it
