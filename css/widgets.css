@@ -119,7 +119,7 @@ form button:hover {
 .dialog_overlay {
     width: 100%;
     height: 100%;
-    background: transparent;
+    background: rgba(0,0,0,0.6);;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -133,18 +133,33 @@ form button:hover {
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    border: 5px solid black;
-    background-color: white;
+    border: 5px solid white;
+    background-color: #440417;
     border-radius: 5vmin;
 }
 
 .dialog_overlay p {
     font-family: Source Sans Pro, Sans Pro, serif;
     font-size: 24px;
-    color: #440417;
+    color: white;
     font-weight: 900
 }
 
 .dialog_overlay button {
+    background-color: white;
+    color: #440417;
+    font-family: Source Sans Pro, Sans Pro, serif;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 6px 12px 6px 12px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    min-height: 30px;
+    border-radius: 15px;
+}
 
+.dialog_overlay button:hover {
+    color: white;
+    background-color: black;
 }
