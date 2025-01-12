@@ -245,6 +245,21 @@
 
 </div>
 
+<div id="dialog_overlay" class="dialog_overlay" hidden>
+    <dialog id="dialog_wait">
+        <p>Submitting registration</p>
+    </dialog>
+    <dialog id="dialog_success">
+        <p>Registration successful</p>
+        <button onclick="closeConfirmationDialog()"><b>close</b></button>
+    </dialog>
+    <dialog id="dialog_failure">
+        <p>Registration failed</p>
+        <button onclick="closeConfirmationDialog()"><b>close</b></button>
+    </dialog>
+</div>
+
+
 
 <!--Script to enable/disable partner input-->
 <script>
@@ -384,21 +399,43 @@
     };
 </script>
 
-<!--Event listener for form submission-->
+<!--Script to close the confirmation dialogs-->
 <script>
+    function closeConfirmationDialog() {
+        document.getElementById('dialog_success').close();
+        document.getElementById('dialog_failure').close();
+        document.getElementById('dialog_overlay').hidden = true;
+    }
+</script>
+
+<!--Add event listeners-->
+<script>
+    // Add event listener for form submission
     window.addEventListener("load", function () {
         const form = document.getElementById('wedding-registration');
-        form.addEventListener("submit", function (e) {
+        form.addEventListener("submit", async function (e) {
             e.preventDefault();
+            document.getElementById('dialog_overlay').hidden = false;
+            document.getElementById('dialog_wait').show();
             const data = new FormData(form);
             const action = e.target.action;
-            fetch(action, {
-                method: 'POST',
-                body: data,
-            })
-                .then(() => {
-                    alert("Success!");
+            try {
+                const reply = await fetch(action, {
+                    method: 'POST',
+                    body: data,
                 })
+                const json = await reply.json();
+                const result = json['result'];
+                document.getElementById('dialog_wait').close();
+                if (result === 'success') {
+                    document.getElementById('dialog_success').show();
+                } else {
+                    document.getElementById('dialog_failure').show();
+                }
+            } catch (error) {
+                document.getElementById('dialog_success').close();
+                document.getElementById('dialog_failure').show();
+            }
         });
     });
 </script>
