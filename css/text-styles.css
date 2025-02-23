@@ -48,6 +48,7 @@ p {
     margin-right: 5%;
     overflow: auto;
     overflow-style: marquee-line;
+    text-align: justify;
 }
 
 ul {
